@@ -26,7 +26,7 @@ function ProductCatalogue() {
         {products.map((product) => (
           <div key={product._id} style={styles.productCard}>
             <img
-              src={product.image || 'https://via.placeholder.com/150x150'} 
+              src={product.image || 'https://via.placeholder.com/150x150'} // Replace with actual product image URL
               alt={product.name}
               style={styles.productImage}
             />

@@ -26,7 +26,7 @@ function ProductCatalogue() {
         {products.map((product) => (
           <div key={product._id} style={styles.productCard}>
             <img
-              src={product.image || 'https://via.placeholder.com/150x150'} 
+              src={product.image || 'https://via.placeholder.com/150x150'} // Replace with actual product image URL
               alt={product.name}
               style={styles.productImage}
             />
@@ -45,12 +45,12 @@ function ProductCatalogue() {
 const styles = {
   container: {
     padding: '20px',
-    backgroundColor: '#F1F8E9', 
+    backgroundColor: '#F1F8E9', // Light green background to reflect agriculture
     minHeight: '100vh',
   },
   heading: {
     textAlign: 'center',
-    color: '#2E7D32', 
+    color: '#2E7D32', // Dark green
     marginBottom: '20px',
     fontSize: '2rem',
     fontWeight: 'bold',

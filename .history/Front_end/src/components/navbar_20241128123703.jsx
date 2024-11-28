@@ -5,6 +5,11 @@ function Navbar() {
   return (
     <nav style={styles.navbar}>
       <div style={styles.logo}>
+        <img
+          src="https://via.placeholder.com/50x50?text=LOGO" // Replace with your logo URL
+          alt="Logo"
+          style={{ height: '40px' }}
+        />
         <span style={styles.brandName}>AgroMart</span>
       </div>
       <div style={styles.links}>

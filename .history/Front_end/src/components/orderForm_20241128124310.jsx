@@ -4,7 +4,7 @@ import axios from 'axios';
 
 function OrderForm() {
   const location = useLocation();
-  const product = location.state?.product; 
+  const product = location.state?.product; // Access the passed product details from the location state
 
   const [quantity, setQuantity] = useState('');
   const [buyerName, setBuyerName] = useState('');

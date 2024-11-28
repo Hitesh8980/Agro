@@ -17,9 +17,9 @@ function Login() {
       localStorage.setItem('token', response.data.token);
       const decoded = jwtDecode(response.data.token);
       if (decoded.role === 'admin') {
-        navigate('/admin-dashboard'); 
+        navigate('/admin-dashboard'); // Redirect to Admin Dashboard
       } else {
-        navigate('/user-dashboard'); 
+        navigate('/user-dashboard'); // Redirect to User Dashboard
       }
     } catch (err) {
       setError('Invalid credentials');

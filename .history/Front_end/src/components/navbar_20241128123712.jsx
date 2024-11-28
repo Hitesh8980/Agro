@@ -5,6 +5,7 @@ function Navbar() {
   return (
     <nav style={styles.navbar}>
       <div style={styles.logo}>
+        
         <span style={styles.brandName}>AgroMart</span>
       </div>
       <div style={styles.links}>

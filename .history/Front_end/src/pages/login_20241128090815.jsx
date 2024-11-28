@@ -13,13 +13,13 @@ function Login() {
     e.preventDefault();
 
     try {
-      const response = await axios.post('https://agro-octr.onrender.com/users/login', { email, password });
+      const response = await axios.post('https://agro-octr.onrender.com/products//user/login', { email, password });
       localStorage.setItem('token', response.data.token);
       const decoded = jwtDecode(response.data.token);
       if (decoded.role === 'admin') {
-        navigate('/admin-dashboard'); 
+        navigate('/admin-dashboard'); // Redirect to Admin Dashboard
       } else {
-        navigate('/user-dashboard'); 
+        navigate('/user-dashboard'); // Redirect to User Dashboard
       }
     } catch (err) {
       setError('Invalid credentials');

@@ -26,7 +26,7 @@ function ProductCatalogue() {
         {products.map((product) => (
           <div key={product._id} style={styles.productCard}>
             <img
-              src={product.image || 'https://via.placeholder.com/150x150'} 
+              src={product.image || 'https://via.placeholder.com/150x150'} // Replace with actual product image URL
               alt={product.name}
               style={styles.productImage}
             />
@@ -45,12 +45,12 @@ function ProductCatalogue() {
 const styles = {
   container: {
     padding: '20px',
-    backgroundColor: '#F1F8E9', 
+    backgroundColor: '#F1F8E9', // Light green background to reflect agriculture
     minHeight: '100vh',
   },
   heading: {
     textAlign: 'center',
-    color: '#2E7D32', 
+    color: '#2E7D32', // Dark green
     marginBottom: '20px',
     fontSize: '2rem',
     fontWeight: 'bold',
@@ -63,7 +63,7 @@ const styles = {
   },
   productCard: {
     backgroundColor: 'white',
-    border: '1px solid #C5E1A5', 
+    border: '1px solid #C5E1A5', // Soft green border
     borderRadius: '8px',
     padding: '15px',
     width: '250px',
@@ -72,7 +72,7 @@ const styles = {
     transition: 'transform 0.3s ease',
   },
   productCardHover: {
-    transform: 'scale(1.05)', 
+    transform: 'scale(1.05)', // Slight zoom on hover
   },
   productImage: {
     width: '100%',
@@ -82,19 +82,19 @@ const styles = {
     marginBottom: '10px',
   },
   productName: {
-    color: '#33691E', 
+    color: '#33691E', // Darker green for text
     fontSize: '1.2rem',
     fontWeight: 'bold',
     margin: '10px 0',
   },
   productPrice: {
-    color: '#558B2F', 
+    color: '#558B2F', // Moderate green
     fontSize: '1rem',
     marginBottom: '15px',
   },
   orderButton: {
     padding: '10px 15px',
-    backgroundColor: '#43A047', 
+    backgroundColor: '#43A047', // Bright green for button
     color: 'white',
     border: 'none',
     borderRadius: '5px',
@@ -103,7 +103,7 @@ const styles = {
     transition: 'background-color 0.3s ease',
   },
   orderButtonHover: {
-    backgroundColor: '#2E7D32', 
+    backgroundColor: '#2E7D32', // Darker green on hover
   },
 };
 

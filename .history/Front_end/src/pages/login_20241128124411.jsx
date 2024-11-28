@@ -19,7 +19,7 @@ function Login() {
       if (decoded.role === 'admin') {
         navigate('/admin-dashboard'); 
       } else {
-        navigate('/user-dashboard'); 
+        navigate('/user-dashboard'); // Redirect to User Dashboard
       }
     } catch (err) {
       setError('Invalid credentials');

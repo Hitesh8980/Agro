@@ -4,13 +4,13 @@ import axios from 'axios';
 
 function OrderForm() {
   const location = useLocation();
-  const product = location.state?.product; 
+  const product = location.state?.product; // Access the passed product details from the location state
 
   const [quantity, setQuantity] = useState('');
   const [buyerName, setBuyerName] = useState('');
   const [contactInfo, setContactInfo] = useState('');
   const [deliveryAddress, setDeliveryAddress] = useState('');
-  const [orderId, setOrderId] = useState(null); 
+  const [orderId, setOrderId] = useState(null); // State to store the order ID
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -21,17 +21,17 @@ function OrderForm() {
 
     try {
       const response = await axios.post('https://agro-octr.onrender.com/orders', {
-        productId: product._id, 
+        productId: product._id, // Send the product ID to the backend
         quantity,
         buyerName,
         contactInfo,
         deliveryAddress,
       });
-      setOrderId(response.data._id); 
+      setOrderId(response.data.orderId); // Assume the backend returns the order ID in `response.data.orderId`
       alert('Order placed successfully!');
     } catch (error) {
       alert('Error placing order');
-      console.error(error.response?.data); 
+      console.error(error.response?.data); // To debug the error response from the backend
     }
   };
 
@@ -44,8 +44,8 @@ function OrderForm() {
             <label>Product Name: </label>
             <input
               type="text"
-              value={product.name} 
-              readOnly 
+              value={product.name} // Display the product name here
+              readOnly // Make the product name input read-only
               style={{ padding: '10px', width: '100%' }}
             />
           </div>
@@ -92,7 +92,7 @@ function OrderForm() {
       {orderId && (
         <div style={{ marginTop: '20px', padding: '10px', border: '1px solid #ddd', backgroundColor: '#f9f9f9' }}>
           <h3>Order Placed Successfully!</h3>
-          <p>Your reference number is: <strong>{_id}</strong></p>
+          <p>Your reference number is: <strong>{orderId}</strong></p>
         </div>
       )}
     </div>

@@ -5,6 +5,11 @@ function Navbar() {
   return (
     <nav style={styles.navbar}>
       <div style={styles.logo}>
+        <img
+          src="https://via.placeholder.com/50x50?text=LOGO" // Replace with your logo URL
+          alt="Logo"
+          style={{ height: '40px' }}
+        />
         <span style={styles.brandName}>AgroMart</span>
       </div>
       <div style={styles.links}>
@@ -21,7 +26,7 @@ const styles = {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    backgroundColor: '#2E7D32', 
+    backgroundColor: '#2E7D32', // Green shade for agriculture
     padding: '10px 20px',
     boxShadow: '0 2px 5px rgba(0, 0, 0, 0.1)',
     color: 'white',
@@ -34,7 +39,7 @@ const styles = {
     marginLeft: '10px',
     fontSize: '1.5rem',
     fontWeight: 'bold',
-    color: '#FFD600', 
+    color: '#FFD600', // Highlighted yellow for vibrancy
   },
   links: {
     display: 'flex',
